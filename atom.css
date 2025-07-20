@@ -61,6 +61,7 @@ body {
     height: 10px;
     background-color: #66ccff;
     border-radius: 50%;
+    animation: orbit 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -69,5 +70,33 @@ body {
     }
     to {
         transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    25% {
+        top: 50%;
+        left: -5px;
+        transform: translateY(-50%);
+    }
+    50% {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+    75% {
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+    }
+    100% {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
